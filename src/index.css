@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222 47% 11%;
+        --border: 220 13% 91%;
+    }
+
+    .dark {
+        --background: 222 47% 11%;
+        --foreground: 210 40% 98%;
+        --border: 217 33% 17%;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', system-ui, sans-serif;
+        background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(220 40% 96%), hsl(270 40% 96%));
+    }
+
+    .dark body {
+        background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(222 47% 15%), hsl(222 47% 11%));
+    }
+
+    html {
+        @apply transition-colors duration-500;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply backdrop-blur-xl bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+    }
+
+    .glass-strong {
+        @apply backdrop-blur-xl bg-white/20 dark:bg-black/20 border border-white/30 dark:border-white/20;
+    }
+}
