@@ -1,4 +1,4 @@
-# College Society Management System
+# College Society Management System (PromptOps Workshop Project)
 
 A premium, production-ready SaaS frontend for managing college societies and events. Built with React, Vite, TypeScript, and Tailwind CSS.
 
